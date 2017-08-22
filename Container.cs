@@ -20,10 +20,7 @@ namespace Alexphi.MinLocator
 
         public I Resolve<I>()
         {
-            if (_services.ContainsKey(typeof(I)))
-                return (I)_services[typeof(I)]();
-            else
-                throw new KeyNotFoundException();
+            return (I)_services[typeof(I)]();
         }
     }
 }
